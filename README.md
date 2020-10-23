@@ -57,3 +57,17 @@ logging.level:
   org.hibernate.SQL: debug
 #  org.hibernate.type: trace
 ```
+
+## 쿼리 메소드 필터조건
+- 스프링 데이터 JPA 공식문서 [링크](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation)
+
+#### 스프링 데이터 JPA가 제공하는 쿼리 메소드 기능
+- 조회: find…By ,read…By ,query…By get…By,
+  - https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation
+  - 예:) findHelloBy 처럼 ...에 식별하기 위한 내용(설명)이 들어가도 된다.
+- COUNT: count…By 반환타입 long
+- EXISTS: exists…By 반환타입 boolean
+- 삭제: delete…By, remove…By 반환타입 long
+- DISTINCT: findDistinct, findMemberDistinctBy
+- LIMIT: findFirst3, findFirst, findTop, findTop3
+  - https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.limit-query-result

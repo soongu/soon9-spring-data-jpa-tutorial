@@ -10,4 +10,13 @@ class DataJpaApplicationTests {
 	void contextLoads() {
 	}
 
+	@Test
+	public void question() throws Exception {
+	    //given
+
+	    //when
+
+	    //then
+	}
+
 }
