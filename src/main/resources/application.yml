@@ -1,0 +1,30 @@
+server:
+  port: 8181
+
+spring:
+  # H2
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/datajpa
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  # MySQL
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/jpastudy?serverTimezone=Asia/Seoul
+#    username: root
+#    password: mysql
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#        show_sql: true
+        format_sql: true
+        default_batch_fetch_size: 1000
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
